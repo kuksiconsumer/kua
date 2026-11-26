@@ -1,0 +1,94 @@
+meta_title: Kuä · See, check and correct what the state records about you
+desc: Kuä is a student research prototype proposing an eGov service that lets citizens of Kazakhstan see who accesses their records, find contradictions between registries and get errors corrected.
+---
+<section class="hero"><div class="wrap">
+<div>
+<p class="eyebrow"><span class="tag">Proposal</span> A citizen-facing eGov service for Kazakhstan</p>
+<h1>Kuä bol. <em>See, check and correct</em> what the state records about you.</h1>
+<p class="lede">Kuä is a proposed eGov service. It would show citizens every access to their records, find contradictions between state registries, and help them get errors corrected by the agencies responsible for them.</p>
+<div class="cta"><a class="btn btn-primary" href="#demo">Try the demo {{icon:arrow}}</a><a class="btn btn-ghost" href="problem.html">Read the analysis</a></div>
+<p class="note">{{icon:info}}<span>Kuä (Куә) means “witness” in Kazakh, so “Kuä bol” means “be a witness”.</span></p>
+</div>
+<div class="art rv">{{hero}}</div>
+</div></section>
+
+<section class="band tight"><div class="wrap">
+<div class="sec-head"><div><p class="eyebrow">Why it matters</p><h2>Kazakhstan ranks 16th in the world for digital government. Its records still disagree.</h2>
+<p>eGov does not produce the data it displays. It shows records from separate state registries, and only the agency responsible for a record can correct it. Meanwhile, the same people's data keeps leaking from different organisations.</p></div></div>
+{{stats}}
+</div></section>
+
+<section class="band" id="functions"><div class="wrap">
+<div class="sec-head"><div><p class="eyebrow">How it works</p><h2>Four functions</h2>
+<p>AI is used only for explaining, identifying the responsible agency and drafting. It does not edit records or make decisions.</p></div>
+<a class="btn btn-ghost" href="solution.html">Full design {{icon:arrow}}</a></div>
+
+<article class="fn rv"><div class="fn-text"><span class="num">01 · VIEW</span><h3>See every access to your records</h3>
+<p>A single list of every access to and change in a citizen's records, by state bodies and companies, in Kazakh, Russian or English.</p>
+<ul><li>Access by law enforcement is included. Where details are restricted, Kuä still records that “an exempt body accessed [category] on [date]” and tells the citizen where to request details.</li>
+<li>Access by staff also appears in the log, so misuse by insiders becomes visible.</li></ul>
+<div class="tags"><span class="tag plain">No AI</span><span class="tag">Strict approach</span></div></div>
+{{loop:view}}</article>
+
+<article class="fn rv"><div class="fn-text"><span class="num">02 · CHECK</span><h3>Find records that contradict each other</h3>
+<p>Standard software, not AI, compares a citizen's records across registries and flags contradictions.</p>
+<ul><li>Using standard software for comparisons also keeps energy use down.</li>
+<li>Every mismatch is recorded, anonymised and by registry, for the public scorecard.</li></ul>
+<div class="tags"><span class="tag ok">Rule-based · no AI</span></div></div>
+{{loop:check}}</article>
+
+<article class="fn rv"><div class="fn-text"><span class="num">03 · CORRECT</span><h3>Get errors fixed by the agency that made them</h3>
+<p>AI explains each mismatch, identifies the agency responsible for the record and drafts a correction request or complaint. The citizen decides whether to send it.</p>
+<ul><li>The original record is always shown next to the AI's explanation, because language models perform worse in Kazakh than in English.</li>
+<li>Correction stays a human process with legal deadlines.</li></ul>
+<div class="tags"><span class="tag">AI drafts</span><span class="tag plain">You decide</span></div></div>
+{{loop:correct}}</article>
+
+<article class="fn rv"><div class="fn-text"><span class="num">04 · ESCALATE</span><h3>Unanswered requests leave the ministry</h3>
+<p>Requests that receive no response are passed automatically to oversight bodies outside the ministry.</p>
+<ul><li>Unresolved cases go to the Human Rights Commissioner.</li>
+<li>Every case is counted in a public scorecard, and the Supreme Audit Chamber reviews the service each year.</li></ul>
+<div class="tags"><span class="tag plain">Automatic rules</span><span class="tag warn">Outside the ministry</span></div></div>
+{{loop:escalate}}</article>
+</div></section>
+
+<section class="band alt" id="demo"><div class="wrap">
+<div class="sec-head"><div><p class="eyebrow">{{icon:play}} Scripted demo</p><h2>A walkthrough in six steps</h2>
+<p>Follow a fictional citizen, A. Seitkali from Pavlodar, as she checks her records. Choose a step on the left or use the buttons under the phone.</p></div></div>
+{{demo}}
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="split2" style="gap:clamp(24px,4vw,56px);align-items:start">
+<div class="rv"><p class="eyebrow">Governance</p><h2>State-run, checked from outside</h2>
+<p>Kuä needs access to state registries, so it has to be a state service. But the personal-data regulator, the Committee on Information Security, belongs to the same ministry that runs eGov. A service that only the ministry can check would leave the operator supervising itself.</p>
+<p>The proposal therefore takes a <strong>middle option</strong>: the state operates Kuä, but oversight is shared among several bodies outside the ministry.</p>
+<p><a href="costs.html#political">Why this design, and what it costs →</a></p></div>
+<div>{{gov}}</div>
+</div></div></section>
+
+<section class="band alt"><div class="wrap">
+<div class="sec-head"><div><p class="eyebrow">Inclusion</p><h2>Built for people who are often left out</h2>
+<p>Accessibility is a design principle, not an add-on. Rural citizens and people with disabilities are also the groups that current data leaves out.</p></div></div>
+<div class="cards c3">
+<div class="card rv"><span class="glyph">{{icon:mic}}</span><h3>Voice input</h3><p>Speak instead of typing.</p></div>
+<div class="card rv" data-d="1"><span class="glyph">{{icon:text}}</span><h3>Plain-language mode</h3><p>Short sentences, with no legal or technical terms.</p></div>
+<div class="card rv" data-d="2"><span class="glyph">{{icon:ear}}</span><h3>Screen readers and large text</h3><p>Every screen works with screen readers and can be enlarged.</p></div>
+<div class="card rv"><span class="glyph">{{icon:users}}</span><h3>A trusted helper</h3><p>A relative can help with the citizen's consent, since many older and disabled people handle paperwork with family.</p></div>
+<div class="card rv" data-d="1"><span class="glyph">{{icon:store}}</span><h3>Always available offline</h3><p>All functions are also available at a Public Service Centre (ЦОН), in line with the AI Law's right to refuse interaction with AI.</p></div>
+<div class="card rv" data-d="2"><span class="glyph">{{icon:globe}}</span><h3>Three languages</h3><p>Kazakh, Russian and English, with accuracy published separately for each.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="sec-head"><div><p class="eyebrow">The proposal</p><h2>Read the full analysis</h2>
+<p>Each page covers one part of the assignment and links every figure to its source.</p></div><a class="btn btn-ghost" href="sources.html">All sources {{icon:arrow}}</a></div>
+<div class="cards c3">
+<a class="card rv" href="problem.html"><span class="k">Section 1</span><h3>The problem</h3><p>Who bears the cost of the state's data errors?</p><span class="go">Read {{icon:arrow}}</span></a>
+<a class="card rv" data-d="1" href="data.html"><span class="k">Section 2</span><h3>Background and data</h3><p>What is measured, what is not, and how reliable it is.</p><span class="go">Read {{icon:arrow}}</span></a>
+<a class="card rv" data-d="2" href="research.html"><span class="k">Section 3</span><h3>Current research</h3><p>Four approaches to Kazakhstan's digital government, and the gap between them.</p><span class="go">Read {{icon:arrow}}</span></a>
+<a class="card rv" href="solution.html"><span class="k">Section 4.1–4.2</span><h3>The solution</h3><p>What Kuä does, where AI is used, and lessons from the UK, Ukraine and Estonia.</p><span class="go">Read {{icon:arrow}}</span></a>
+<a class="card rv" data-d="1" href="costs.html"><span class="k">Section 4.3</span><h3>The costs</h3><p>Environmental, economic, labour, political and data-ethics costs.</p><span class="go">Read {{icon:arrow}}</span></a>
+<a class="card rv" data-d="2" href="verdict.html"><span class="k">Section 4.4</span><h3>The verdict</h3><p>Build Kuä only under six conditions.</p><span class="go">Read {{icon:arrow}}</span></a>
+</div>
+</div></section>

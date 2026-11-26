@@ -1,0 +1,84 @@
+title: The costs
+eyebrow: Section 4.3
+lede: Kuä's direct energy use is small. The larger costs are political: who runs it, who checks it, and whether it adds to coal-powered AI infrastructure.
+art: costs
+---
+<section id="environment" data-toc="Environmental">
+<h2>Environmental</h2>
+<p><a href="https://doi.org/10.57967/hf/3004">Luccioni et al. (2024)</a> note that AI's environmental impact covers its whole lifecycle, from mineral extraction to use, and that energy use of specific applications is rarely disclosed. I therefore made an estimate.</p>
+<p>Microsoft researchers estimate energy use per query for models with more than 200 billion parameters at 0.34 Wh (interquartile range 0.18–0.67 Wh) <a class="src" href="https://www.microsoft.com/en-us/research/publication/energy-use-of-ai-inference-efficiency-pathways-and-test-time-compute">[Microsoft Research]</a>, and Google measured 0.24 Wh for a median Gemini prompt <a class="src" href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference">[Google]</a>. AlemLLM (247 billion parameters, 22 billion active) falls within this range <a class="src" href="https://huggingface.co/astanahub/alemllm">[Hugging Face]</a>.</p>
+<p>In my scenario, 1 million users a month, each making 5 AI requests, would produce 60 million requests a year, or <strong>10.8–40.2 MWh a year</strong>. Kazakhstan's grid emits about 603 gCO₂e per kWh <a class="src" href="https://www.lowcarbonpower.org/region/Kazakhstan">[LowCarbonPower]</a> (coal accounts for 62.1% of generation according to the Energy Ministry <a class="src" href="https://astanatimes.com/2026/06/coal-accounts-for-over-60-of-kazakhstans-electricity-as-its-energy-mix-diversifies/">[Astana Times]</a>, and 75% according to an industry source <a class="src" href="https://ar2025.samruk-energy.kz/en/index/market-review.html">[Samruk-Energy]</a>). This gives <strong>about 6.5–24 t CO₂e a year</strong>, equal to the annual emissions of between half a person and two people in Kazakhstan (13.94 t per person) <a class="src" href="https://ourworldindata.org/profile/co2/kazakhstan">[Our World in Data]</a>.</p>
+{{energy}}
+{{calc}}
+<p>The direct footprint is small; the larger issue is that Kuä adds demand for coal-based AI infrastructure:</p>
+<ul>
+<li><strong>Computing:</strong> the national supercomputer's 496 H200 GPUs draw up to about 347 kW at full load <a class="src" href="https://nitec.kz/en/proekty/national-supercomputer">[NIT]</a> <a class="src" href="https://www.nvidia.com/h200">[NVIDIA]</a>.</li>
+<li><strong>Water:</strong> <a href="https://arxiv.org/abs/2304.03271">Li et al. (2023)</a> estimate that GPT-3 used about 500 ml of water for every 10–50 responses, and show that water efficiency depends on where the computing takes place. Data Center Valley in Ekibastuz, a coal-power centre, is planned to reach 1 GW and to draw 2,300 m³ of water a day from the Satpayev Canal <a class="src" href="https://www.gov.kz/memleket/entities/maidd/press/news/details/1211917?lang=en">[gov.kz]</a> <a class="src" href="https://kz.kursiv.media/en/2026-06-12/engk-yeri-new-1-gigawatt-data-center-project-to-transform-kazakhstans-economy/">[Kursiv]</a>.</li>
+<li><strong>Electricity prices:</strong> the IEA (2026) reports that data centres used 1.5% of global electricity in 2025, and that growing demand can raise prices where supply is limited. Kazakhstan's supply is limited: in 2025 it consumed 124.6 billion kWh but generated 123.1 billion <a class="src" href="https://www.trend.az/casia/kazakhstan/4145602.html">[Trend.az]</a>, and its 2026 forecast reportedly did not include data-centre projects <a class="src" href="https://timesca.com/?p=54524">[Times of Central Asia]</a>.</li>
+<li><strong>Measurement:</strong> Kazakhstan has no unified grid emission factor, so this estimate uses external data <a class="src" href="https://enu.kz/en/dissertation/89/doctorals/1118">[ENU]</a>.</li>
+</ul>
+<div class="callout">{{icon:leaf}}<p>To reduce these costs, Kuä would use standard software for comparisons and publish its energy use per request.</p></div>
+</section>
+
+<section id="economic" data-toc="Economic">
+<h2>Economic</h2>
+<div class="tbl-wrap"><table class="tbl">
+<tbody>
+<tr><th scope="row">Who pays</th><td>The state budget, and therefore taxpayers.</td></tr>
+<tr><th scope="row">Who benefits</th><td>Hardware and platform suppliers (NVIDIA and HPE; Presight, part of the UAE's G42 group, helped build the Alem.Cloud supercomputer), NIT as the operator, and citizens, through time saved.</td></tr>
+<tr><th scope="row">Who may lose</th><td>Companies relying on long-term, rarely reviewed consent, such as access “until 2092”.</td></tr>
+</tbody></table></div>
+<p>Kuä's cost cannot be estimated from Kazakh data, because the ministry does not disclose AI spending <a class="src" href="https://bes.media/amp/ii-vnedryayut-po-vsemu-kazahstanu-no-rashody-i-spisok-gosproektov-ne-raskryvayut/">[BES.media]</a>. Estonia's experience suggests the cost is manageable; publishing Kuä's budget should be a condition of launch.</p>
+</section>
+
+<section id="labour" data-toc="Labour">
+<h2>Labour</h2>
+<ul>
+<li><strong>Jobs lost or changed:</strong> 313 ЦОН front-office positions (4.3% of 7,232) were cut in the first half of 2026, starting with vacant posts, and no retraining plan was announced <a class="src" href="https://inbusiness.kz/ru/news/v-conah-kazahstana-nachalis-sokrasheniya">[Inbusiness.kz]</a>. The ILO <a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure">(Gmyrek et al. 2025)</a> finds that clerical work remains the occupational group most exposed to generative AI.</li>
+<li><strong>Jobs created:</strong> correction staff in registries, reviewers of AI drafts, and ЦОН staff who help citizens use Kuä, which I propose as a retraining path.</li>
+<li><strong>Less visible labour:</strong>
+<ul>
+<li>The quality of Kuä in Kazakh depends on the people who prepare and check training data, the “preparation” and “verification” work that <a href="https://doi.org/10.1177/2053951720919776">Tubaro et al. (2020)</a> describe.</li>
+<li><a href="https://doi.org/10.35650/JT.3060.d.2023">Williams &amp; Miceli (2023)</a> point to unpaid work by users: citizens who find the state's errors do its quality control for free. Kuä must therefore legally require agencies to correct errors.</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="political" data-toc="Political and governance">
+<h2>Political and governance</h2>
+<ul>
+<li><strong>Institutional design:</strong> the personal-data regulator (the Committee on Information Security) belongs to the ministry that runs eGov <a class="src" href="https://www.gov.kz/memleket/entities/infsecurity/activities/9552?parentId=6">[gov.kz]</a>. The AI Law allows system owners to classify the risk level of their own systems (Art. 17(1)). It gives users rights to explanation and disclosure (Arts. 16 and 21), but no explicit right to human review <a class="src" href="https://zakon.uchet.kz/rus/docs/Z2500000230">[AI Law]</a>.</li>
+<li><strong>Official policy:</strong> the AI Development Concept 2024–2029 states that AI “supplements rather than replaces” people and that humans should be able to override it, but it also follows a “first technology, then regulation” approach <a class="src" href="https://zakon.uchet.kz/rus/docs/P2400000592">[Concept]</a>.</li>
+<li><strong>Political context:</strong> Freedom House rates Kazakhstan “Not Free” (23/100) <a class="src" href="https://freedomhouse.org/fr/node/8120">[Freedom House]</a>. <a href="https://doi.org/10.1126/sciadv.abl8198">Earl et al. (2022)</a> show how digital tools can raise the costs of dissent, and <a href="https://arxiv.org/abs/2402.08797">Sastry et al. (2024)</a> warn that concentrated computing power carries privacy risks and centralises power. Kazakhstan's government data is held in a single 6 MW data centre <a class="src" href="https://timesca.com/kazakhstan-says-10-billion-ai-data-center-project-is-moving-into-deployment/">[Times of Central Asia]</a>.</li>
+</ul>
+<h3>The middle option</h3>
+<p>For these reasons, I propose a <strong>middle option</strong>: the state operates Kuä, but oversight is shared among several bodies. This includes:</p>
+<ul>
+<li>logs that cannot be altered without detection;</li>
+<li>automatic referral of unresolved cases to the Human Rights Commissioner;</li>
+<li>access to the Constitutional Court, to which citizens can now apply directly <a class="src" href="https://astanatimes.com/2024/01/constitutional-court-of-kazakhstan-receives-5300-appeals-in-2023/">[Astana Times]</a>;</li>
+<li>an annual review by the Supreme Audit Chamber, which has already identified 45 systemic shortcomings in digital-development policy <a class="src" href="https://www.inform.kz/ru/narusheniya-na-11-mlrd-tenge-viyavil-gosaudit-v-sfere-tsifrovizatsii-v-kazahstane-6f18c4">[Inform.kz]</a>;</li>
+<li>a public scorecard that is published automatically;</li>
+<li>independent testing by universities.</li>
+</ul>
+{{gov}}
+<p style="margin-top:1.4em">This follows UNESCO's (2021) view that human oversight includes “inclusive public oversight”, and OECD Principle 1.5 on traceability. Under the EU AI Act, Kuä would have to inform people that they are interacting with AI (Art. 50). If used to assess eligibility for benefits, it would become high-risk (Annex III, 5(a)), requiring human oversight (Art. 14) and a fundamental-rights impact assessment (Art. 27), so such use should be banned <a class="src" href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">[EUR-Lex]</a>.</p>
+</section>
+
+<section id="ethics" data-toc="Data ethics">
+<h2>Data ethics</h2>
+<ul>
+<li><strong>Consent and storage:</strong> Kuä reads a citizen's records only at the citizen's request and does not create a new central database. Recent research finds a gap between Kazakhstan's cybersecurity institutions and their actual readiness to respond to incidents <a href="https://doi.org/10.3389/fpos.2026.1904000">(Kosherbayeva et al. 2026)</a>.</li>
+<li><strong>Visible privacy protections:</strong> <a href="https://doi.org/10.1177/09520767251404286">Alishani &amp; Homburg (2025)</a> found that privacy concerns reduce willingness to use service chatbots, and general explanations did not help. Kuä would therefore show its safeguards on every screen.</li>
+<li><strong>Accessibility:</strong> following Mhlambi's (2020) relational view of personhood, a trusted relative can help with consent, since many older and disabled people handle paperwork with family.</li>
+</ul>
+<h3>Other risks and responses</h3>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Risk</th><th>Response</th></tr></thead>
+<tbody>
+<tr><td>Fake copies of the service</td><td>Kuä is hosted at kua.egov.kz and never sends links by SMS.</td></tr>
+<tr><td>Misuse by insiders</td><td>Staff access appears in the citizen's log.</td></tr>
+<tr><td>AI errors</td><td>Language models perform worse in Kazakh than in English <a class="src" href="https://aclanthology.org/2024.sigturk-1.8">(Maxutov et al. 2024)</a>, so the original record is always shown.</td></tr>
+<tr><td>Use of data against citizens</td><td>A legal ban on using Kuä data for enforcement against the citizen.</td></tr>
+</tbody></table></div>
+</section>

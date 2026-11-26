@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-theme="system">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Current state of research · Kuä</title>
+<meta name="title-en" content="Current state of research · Kuä"><meta name="title-kk" content="Зерттеулердің қазіргі жағдайы · Kuä"><meta name="title-ru" content="Состояние исследований · Kuä">
+<meta name="description" content="Kuä is a student research prototype. It proposes an eGov service that would let citizens of Kazakhstan see who accesses their records, find contradictions between registries and get errors corrected.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1830" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e4eefb" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Literata.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=new URLSearchParams(location.search).get("lang");var l=q||localStorage.getItem("kua-lang");if(l&&/^(en|kk|ru)$/.test(l)){d.setAttribute("data-lang",l);d.setAttribute("lang",l)}var t=localStorage.getItem("kua-theme");if(t)d.setAttribute("data-theme",t)}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main"><span class="l-en" lang="en">Skip to content</span><span class="l-kk" lang="kk">Мазмұнға өту</span><span class="l-ru" lang="ru">Перейти к содержанию</span></a>
+<div class="progress" aria-hidden="true"></div>
+<div class="proto"><div class="wrap"><span class="mark" aria-hidden="true"></span><span><span class="l-en" lang="en">A student research prototype for PLS 419 at Nazarbayev University. Not an official government website.</span><span class="l-kk" lang="kk">Назарбаев Университетіндегі PLS 419 курсына арналған студенттік зерттеу прототипі. Ресми мемлекеттік сайт емес.</span><span class="l-ru" lang="ru">Студенческий исследовательский прототип для курса PLS 419 в Назарбаев Университете. Не официальный государственный сайт.</span></span>
+<button type="button" data-disclose aria-expanded="false" aria-controls="proto-more"><span class="l-en" lang="en">How to tell</span><span class="l-kk" lang="kk">Қалай ажыратуға болады</span><span class="l-ru" lang="ru">Как это понять</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div></div>
+<div class="proto-more" id="proto-more" hidden><div class="wrap grid">
+<div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></span><b><span class="l-en" lang="en">This is a proposal, not a service</span><span class="l-kk" lang="kk">Бұл қызмет емес, ұсыныс</span><span class="l-ru" lang="ru">Это предложение, а не услуга</span></b><span class="l-en" lang="en">Kuä does not connect to eGov, collect personal data or run live AI. Every screen in the demo is scripted with fictional data.</span><span class="l-kk" lang="kk">Kuä eGov-қа қосылмайды, жеке деректер жинамайды және нақты уақытта ЖИ қолданбайды. Демодағы барлық экран алдын ала жазылған және ойдан шығарылған деректерді көрсетеді.</span><span class="l-ru" lang="ru">Kuä не подключён к eGov, не собирает персональные данные и не использует ИИ в реальном времени. Все экраны демо заранее прописаны и содержат вымышленные данные.</span></div>
+<div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><b><span class="l-en" lang="en">Use official channels for real services</span><span class="l-kk" lang="kk">Нақты қызметтер үшін ресми арналарды пайдаланыңыз</span><span class="l-ru" lang="ru">Для настоящих услуг используйте официальные каналы</span></b><span class="l-en" lang="en">The official e-government portal is <a href="https://egov.kz">egov.kz</a>. Kuä has no affiliation with the Government of Kazakhstan, eGov.kz or NIT.</span><span class="l-kk" lang="kk">Электрондық үкіметтің ресми порталы — <a href="https://egov.kz">egov.kz</a>. Kuä Қазақстан Үкіметімен, eGov.kz-пен немесе ҰАТ-пен байланысты емес.</span><span class="l-ru" lang="ru">Официальный портал электронного правительства — <a href="https://egov.kz">egov.kz</a>. Kuä не связан с Правительством Казахстана, eGov.kz или НИТ.</span></div></div></div>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="var(--accent)"/><path d="M9 11.5h11M9 17h16M9 22.5h9" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round"/><circle cx="24.5" cy="11.5" r="2.6" fill="var(--accent-ink)"/></svg><span><b>Kuä</b><small><span class="l-en" lang="en">Kuä bol · See, check, correct</span><span class="l-kk" lang="kk">Kuä bol · Көру, тексеру, түзету</span><span class="l-ru" lang="ru">Kuä bol · Видеть, проверять, исправлять</span></small></span></a>
+<div class="controls">
+<div class="seg" role="group" aria-label="Language"><button type="button" data-set-lang="kk" aria-pressed="false" lang="kk" aria-label="Қазақша">ҚАЗ</button><button type="button" data-set-lang="ru" aria-pressed="false" lang="ru" aria-label="Русский">РУС</button><button type="button" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">ENG</button></div>
+<div class="seg theme" role="group" aria-label="Theme"><button type="button" data-set-theme="system" aria-pressed="false" aria-label="System" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="t"><span class="l-en" lang="en">System</span><span class="l-kk" lang="kk">Жүйелік</span><span class="l-ru" lang="ru">Системная</span></span></button><button type="button" data-set-theme="light" aria-pressed="false" aria-label="Light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="t"><span class="l-en" lang="en">Light</span><span class="l-kk" lang="kk">Ашық</span><span class="l-ru" lang="ru">Светлая</span></span></button><button type="button" data-set-theme="dark" aria-pressed="false" aria-label="Dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="t"><span class="l-en" lang="en">Dark</span><span class="l-kk" lang="kk">Күңгірт</span><span class="l-ru" lang="ru">Тёмная</span></span></button></div>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></div></header>
+<div class="xnote" role="note"><div class="wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><span><span class="l-en" lang="en">This translation is a raw draft and will be double-checked. The original version of this site is in English.</span><span class="l-kk" lang="kk">Бұл аударма — алғашқы нұсқа, ол қосымша тексеріледі. Сайттың түпнұсқасы ағылшын тілінде.</span><span class="l-ru" lang="ru">Это черновой перевод, он будет дополнительно проверен. Оригинальная версия сайта — на английском языке.</span></span><button type="button" data-show-en><span class="l-en" lang="en">Read in English</span><span class="l-kk" lang="kk">Ағылшынша оқу</span><span class="l-ru" lang="ru">Читать на английском</span></button></div></div>
+<nav class="navbar" id="site-nav" aria-label="Main"><div class="wrap"><a href="index.html"><span class="l-en" lang="en">Home</span><span class="l-kk" lang="kk">Басты бет</span><span class="l-ru" lang="ru">Главная</span></a><a href="problem.html"><span class="l-en" lang="en">Problem</span><span class="l-kk" lang="kk">Мәселе</span><span class="l-ru" lang="ru">Проблема</span></a><a href="data.html"><span class="l-en" lang="en">Data</span><span class="l-kk" lang="kk">Деректер</span><span class="l-ru" lang="ru">Данные</span></a><a href="research.html" aria-current="page"><span class="l-en" lang="en">Research</span><span class="l-kk" lang="kk">Зерттеулер</span><span class="l-ru" lang="ru">Исследования</span></a><a href="solution.html"><span class="l-en" lang="en">Solution</span><span class="l-kk" lang="kk">Шешім</span><span class="l-ru" lang="ru">Решение</span></a><a href="costs.html"><span class="l-en" lang="en">Costs</span><span class="l-kk" lang="kk">Шығындар</span><span class="l-ru" lang="ru">Издержки</span></a><a href="verdict.html"><span class="l-en" lang="en">Verdict</span><span class="l-kk" lang="kk">Қорытынды</span><span class="l-ru" lang="ru">Вывод</span></a><a href="about.html"><span class="l-en" lang="en">About</span><span class="l-kk" lang="kk">Жоба туралы</span><span class="l-ru" lang="ru">О проекте</span></a><a href="sources.html"><span class="l-en" lang="en">Sources</span><span class="l-kk" lang="kk">Дереккөздер</span><span class="l-ru" lang="ru">Источники</span></a>
+<a class="demo-link" href="index.html#demo"><span class="l-en" lang="en">Try the demo</span><span class="l-kk" lang="kk">Демоны көру</span><span class="l-ru" lang="ru">Попробовать демо</span> →</a>
+<div class="drawer-only"><span class="muted"><span class="l-en" lang="en">Theme</span><span class="l-kk" lang="kk">Тақырып</span><span class="l-ru" lang="ru">Тема</span></span><div class="seg" role="group" aria-label="Theme"><button type="button" data-set-theme="system" aria-pressed="false" aria-label="System" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="t"><span class="l-en" lang="en">System</span><span class="l-kk" lang="kk">Жүйелік</span><span class="l-ru" lang="ru">Системная</span></span></button><button type="button" data-set-theme="light" aria-pressed="false" aria-label="Light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="t"><span class="l-en" lang="en">Light</span><span class="l-kk" lang="kk">Ашық</span><span class="l-ru" lang="ru">Светлая</span></span></button><button type="button" data-set-theme="dark" aria-pressed="false" aria-label="Dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="t"><span class="l-en" lang="en">Dark</span><span class="l-kk" lang="kk">Күңгірт</span><span class="l-ru" lang="ru">Тёмная</span></span></button></div></div>
+</div></nav>
+<main id="main"><div class="page-head"><div class="wrap"><div><div class="l-en" lang="en"><div class="crumbs"><a href="index.html">Home</a> / Research</div><p class="eyebrow">Section 3</p><h1>Current state of research</h1><p class="lede">Research on Kazakhstan's digital government falls into four approaches. They differ mainly on whether digitalisation strengthens citizens or the state.</p><div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 min read</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>Updated 26 Nov 2026</span></div></div><div class="l-kk" lang="kk"><div class="crumbs"><a href="index.html">Басты бет</a> / Зерттеулер</div><p class="eyebrow">3-бөлім</p><h1>Зерттеулердің қазіргі жағдайы</h1><p class="lede">Қазақстанның цифрлық үкіметі туралы зерттеулер төрт тәсілге бөлінеді. Олар негізінен цифрландыру азаматтарды ма, әлде мемлекетті ме күшейтеді деген мәселеде алшақтайды.</p><div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 мин оқу</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>Жаңартылған күні: 2026 жылғы 26 қараша</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Түпнұсқа: ағылшынша</span></div></div><div class="l-ru" lang="ru"><div class="crumbs"><a href="index.html">Главная</a> / Исследования</div><p class="eyebrow">Раздел 3</p><h1>Состояние исследований</h1><p class="lede">Исследования цифрового правительства Казахстана делятся на четыре подхода. Они расходятся прежде всего в том, усиливает ли цифровизация граждан или государство.</p><div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 мин чтения</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>Обновлено 26 ноября 2026 г.</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Оригинал: английский</span></div></div></div><div class="art" aria-hidden="true"><svg viewBox="0 0 240 180" aria-hidden="true"><circle cx="92" cy="70" r="50" fill="var(--accent)" fill-opacity=".12" stroke="var(--accent)" stroke-width="1.4"/><circle cx="148" cy="70" r="50" fill="var(--accent)" fill-opacity=".12" stroke="var(--accent)" stroke-width="1.4"/><circle cx="120" cy="118" r="50" fill="var(--accent)" fill-opacity=".12" stroke="var(--accent)" stroke-width="1.4"/><circle class="s-warn a-blink" cx="120" cy="88" r="6"/></svg></div></div></div><div class="wrap"><div class="article"><aside class="toc" aria-label="On this page"><div class="l-en" lang="en"><b>On this page</b><ol><li><a href="#map">Four approaches</a></li><li><a href="#development">1. Development</a></li><li><a href="#capacity">2. Citizen capacity</a></li><li><a href="#critical">3. Critical-political</a></li><li><a href="#legal">4. Legal-governance</a></li><li><a href="#theory">International theory</a></li><li><a href="#complication">Evidence against</a></li><li><a href="#summary">Summary</a></li></ol></div><div class="l-kk" lang="kk"><b>Осы бетте</b><ol><li><a href="#map">Төрт тәсіл</a></li><li><a href="#development">1. Даму</a></li><li><a href="#capacity">2. Азаматтардың мүмкіндігі</a></li><li><a href="#critical">3. Сыни-саяси</a></li><li><a href="#legal">4. Құқықтық басқару</a></li><li><a href="#theory">Халықаралық теория</a></li><li><a href="#complication">Қарсы дәлелдер</a></li><li><a href="#summary">Қорытынды</a></li></ol></div><div class="l-ru" lang="ru"><b>На этой странице</b><ol><li><a href="#map">Четыре подхода</a></li><li><a href="#development">1. Развитие</a></li><li><a href="#capacity">2. Возможности граждан</a></li><li><a href="#critical">3. Критико-политический</a></li><li><a href="#legal">4. Правовой</a></li><li><a href="#theory">Международная теория</a></li><li><a href="#complication">Доказательства против</a></li><li><a href="#summary">Итог</a></li></ol></div></aside><div class="prose"><div class="l-en" lang="en"><section id="map" data-toc="Four approaches">
+<h2>Four approaches</h2>
+<p>Research on Kazakhstan's digital government can be grouped into four approaches. They differ mainly on whether digitalisation strengthens citizens or the state.</p>
+<figure class="fig"><div class="fig-head"><div><span class="k">Map of the literature</span><h4>Where the gap sits</h4></div></div><svg viewBox="0 0 520 340" role="img" aria-label="Where the gap sits" style="max-width:560px;margin-inline:auto">
+<rect x="6" y="6" width="508" height="328" rx="16" fill="none" stroke="var(--line-2)" stroke-dasharray="5 5"/>
+<text class="c-lbl" x="24" y="30">Approach 1 (development): what the state builds</text>
+<circle class="fadein" style="--i:0" cx="200" cy="140" r="92" fill="var(--g1)" fill-opacity=".16" stroke="var(--g1)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:2" cx="320" cy="140" r="92" fill="var(--g2)" fill-opacity=".16" stroke="var(--g2)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:4" cx="260" cy="236" r="92" fill="var(--g3)" fill-opacity=".2" stroke="var(--g3)" stroke-width="1.5"/>
+<text class="c-lbl2 fadein" style="--i:1;font-weight:600;fill:var(--ink)" x="160" y="118" text-anchor="middle">Capacity</text>
+<text class="c-lbl fadein" style="--i:1" x="160" y="136" text-anchor="middle">Approach 2</text>
+<text class="c-lbl2 fadein" style="--i:3;font-weight:600;fill:var(--ink)" x="360" y="118" text-anchor="middle">Power</text>
+<text class="c-lbl fadein" style="--i:3" x="360" y="136" text-anchor="middle">Approach 3</text>
+<text class="c-lbl2 fadein" style="--i:5;font-weight:600;fill:var(--ink)" x="260" y="284" text-anchor="middle">Rights</text>
+<text class="c-lbl fadein" style="--i:5" x="260" y="302" text-anchor="middle">Approach 4</text>
+<circle class="fadein a-blink" style="--i:7" cx="260" cy="178" r="7" fill="var(--warn)"/>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="200" text-anchor="middle">Can citizens check</text>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="215" text-anchor="middle">and correct records?</text>
+</svg><figcaption>No study I found asks whether citizens can check and correct what the state records about them. That question sits where capacity, power and rights meet.</figcaption></figure>
+</section>
+
+<section id="development" data-toc="1. Development">
+<h2>1. The development approach</h2>
+<p>Most Kazakhstani research treats digital government as a capacity to be expanded. <a href="https://doi.org/10.1007/978-3-032-00514-4_13">Kosherbayeva &amp; Kylbayev (2025)</a> review strategies for citizen engagement through digital platforms and compare Kazakhstan with Estonia, Singapore and Finland. <a href="https://doi.org/10.1007/978-981-95-4656-5_5">Kurmanov &amp; Rakhmetov (2026)</a> discuss the opportunities and challenges of building digital government. <a href="https://doi.org/10.56289/ijcsrp.222">Samarkhanov (2026)</a>, <a href="https://doi.org/10.54251/2522-4026.2026.1.20au">Abishova et al. (2026)</a>, <a href="https://doi.org/10.3389/frai.2025.1656329">Uandykova et al. (2025)</a> and <a href="https://doi.org/10.52123/1994-2370-2026-1804">Zhubanazarov et al. (2026)</a> describe AI's potential in public administration and its staffing and legal constraints. <a href="https://doi.org/10.1109/TIMES-ICON67125.2025.11488132">Issabayeva &amp; Yesmagulova (2025)</a> argue that eGov and open data have improved transparency, but acknowledge that this needs testing with surveys.</p>
+<div class="split2"><div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><p><strong>Strength:</strong> institutional detail.</p></div><div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p><strong>Weakness:</strong> it mostly measures what the state builds rather than what citizens can do with it.</p></div></div>
+</section>
+
+<section id="capacity" data-toc="2. Citizen capacity">
+<h2>2. The citizen-capacity approach</h2>
+<p>A second group of studies asks who is able to use digital government. <a href="https://doi.org/10.3389/fpos.2025.1679601">Amirova (2025)</a> combines legal analysis with the survey of 27,336 users and concludes that fail-safe procedures, once-only data exchange and permanent assisted channels are preconditions for further expansion. <a href="https://hdl.handle.net/10419/340041">Ziyoqulova &amp; Egamberdiev (2026)</a>, using Life in Transition Survey data for four Central Asian countries, find a positive association between digital literacy and e-government use, but note that their design does not support causal conclusions.</p>
+<p>Two Nazarbayev University policy studies add arguments: Astana residents find open-government portals hard to use and feel ignored <a href="https://nur.nu.edu.kz/items/c22f005a-8d92-4ba3-b64d-75ef46dc2ba8">(Ali et al. 2025)</a>, and portal quality is related to trust in government but not to perceived performance (Baibolova &amp; Zhumash 2026). These studies show that some citizens are excluded, but not how citizens could hold the system to account.</p>
+</section>
+
+<section id="critical" data-toc="3. Critical-political">
+<h2>3. The critical-political approach</h2>
+<p><a href="https://doi.org/10.1108/IJPSM-08-2018-0173">Knox &amp; Janenova (2019)</a> identify an “e-government paradox” in Kazakhstan: a strong focus on technology, with faster transactional services drawing attention away from core public services. In a study of non-democratic countries, <a href="https://doi.org/10.1080/01900692.2012.757619">Linde &amp; Karlsson (2013)</a> found no evidence that e-participation reduces corruption or improves the quality of government. <a href="https://doi.org/10.1177/29768640251379943">Dyussenov (2025)</a> argues that the same centralised platforms that deliver services can also strengthen political control.</p>
+<p>This approach explains the risks but offers few practical designs.</p>
+</section>
+
+<section id="legal" data-toc="4. Legal-governance">
+<h2>4. The legal-governance approach</h2>
+<p>Recent work shifts the focus from capacity to rights. Zhetpissov et al. (2026) identify three legal risks of Kazakhstan's centralised digital profiles:</p>
+<ul>
+<li>unlawful processing of data through broad access between agencies;</li>
+<li>use of data for purposes beyond the original one;</li>
+<li>systemic breaches caused by fragmented and reactive accountability.</li>
+</ul>
+<p>They contrast this with EU and OECD models, which rely on independent oversight and differentiated levels of access. <a href="https://doi.org/10.3389/frai.2026.1781993">Buribayeva et al. (2026)</a> map five groups of “hidden” AI risks in the public sector. They argue that these risks come mainly from legal design, centralised data infrastructure and administrative routines, and that safeguards for explanation, audit and appeal remain weak.</p>
+</section>
+
+<section id="theory" data-toc="International theory">
+<h2>International theory</h2>
+<p><a href="https://doi.org/10.1111/0033-3352.00168">Bovens &amp; Zouridis (2002)</a> show that when bureaucracy becomes “system-level”, software designers become key decision-makers and due process is put at risk.</p>
+<p><a href="https://doi.org/10.1177/2053951717736335">Taylor (2017)</a> defines data justice as fairness in the way people are made visible, represented and treated through data, and proposes three pillars. All three apply to Kazakhstan:</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Pillar</th><th>In Kazakhstan</th></tr></thead>
+<tbody>
+<tr><td>(In)visibility</td><td>Citizens are visible to the state but cannot easily see their own records.</td></tr>
+<tr><td>(Dis)engagement with technology</td><td>Opting out of eGov is becoming costlier as ЦОН offices shrink.</td></tr>
+<tr><td>Anti-discrimination</td><td>Errors affect most those least able to challenge them.</td></tr>
+</tbody></table></div>
+<p><a href="https://doi.org/10.1016/j.giq.2018.10.001">Androutsopoulou et al. (2019)</a> describe AI chatbots as a new channel of communication between citizens and government. <a href="https://doi.org/10.1177/09520767251404286">Alishani &amp; Homburg (2025)</a> find in Estonia that perceived usefulness and trust in technology, rather than trust in government, predict willingness to use them.</p>
+</section>
+
+<section id="complication" data-toc="Evidence against">
+<h2>Evidence that complicates this project</h2>
+<div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p>In <a href="https://doi.org/10.1093/jopart/mus048">Grimmelikhuijsen &amp; Meijer's (2014)</a> experiment, greater transparency had no significant effect on the perceived trustworthiness of government. Showing people their data may not, by itself, increase trust.</p></div>
+</section>
+
+<section id="summary" data-toc="Summary">
+<h2>Summary</h2>
+<p>Researchers agree that Kazakhstan's digital services are advanced and its legal safeguards lag behind, but disagree on whether these services mainly strengthen citizens or the state.</p>
+<p>Across these approaches, I found no study of whether citizens can check and correct what the state records about them, or of how often registries disagree. This is the gap that Kuä addresses. It sits where the questions of capacity (approach 2), power (approach 3) and rights (approach 4) meet.</p>
+</section>
+</div><div class="l-kk" lang="kk"><section id="map" data-toc="Төрт тәсіл">
+<h2>Төрт тәсіл</h2>
+<p>Қазақстанның цифрлық үкіметі туралы зерттеулерді төрт тәсілге топтауға болады. Олар негізінен цифрландыру азаматтарды ма, әлде мемлекетті ме күшейтеді деген мәселеде алшақтайды.</p>
+<figure class="fig"><div class="fig-head"><div><span class="k">Әдебиет картасы</span><h4>Олқылық қайда</h4></div></div><svg viewBox="0 0 520 340" role="img" aria-label="Олқылық қайда" style="max-width:560px;margin-inline:auto">
+<rect x="6" y="6" width="508" height="328" rx="16" fill="none" stroke="var(--line-2)" stroke-dasharray="5 5"/>
+<text class="c-lbl" x="24" y="30">1-тәсіл (даму): мемлекет не салады</text>
+<circle class="fadein" style="--i:0" cx="200" cy="140" r="92" fill="var(--g1)" fill-opacity=".16" stroke="var(--g1)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:2" cx="320" cy="140" r="92" fill="var(--g2)" fill-opacity=".16" stroke="var(--g2)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:4" cx="260" cy="236" r="92" fill="var(--g3)" fill-opacity=".2" stroke="var(--g3)" stroke-width="1.5"/>
+<text class="c-lbl2 fadein" style="--i:1;font-weight:600;fill:var(--ink)" x="160" y="118" text-anchor="middle">Мүмкіндік</text>
+<text class="c-lbl fadein" style="--i:1" x="160" y="136" text-anchor="middle">2-тәсіл</text>
+<text class="c-lbl2 fadein" style="--i:3;font-weight:600;fill:var(--ink)" x="360" y="118" text-anchor="middle">Билік</text>
+<text class="c-lbl fadein" style="--i:3" x="360" y="136" text-anchor="middle">3-тәсіл</text>
+<text class="c-lbl2 fadein" style="--i:5;font-weight:600;fill:var(--ink)" x="260" y="284" text-anchor="middle">Құқықтар</text>
+<text class="c-lbl fadein" style="--i:5" x="260" y="302" text-anchor="middle">4-тәсіл</text>
+<circle class="fadein a-blink" style="--i:7" cx="260" cy="178" r="7" fill="var(--warn)"/>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="200" text-anchor="middle">Азаматтар жазбаларды</text>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="215" text-anchor="middle">тексеріп, түзете ала ма?</text>
+</svg><figcaption>Мен тапқан бірде-бір зерттеу азаматтардың мемлекет өздері туралы жазғанды тексеріп, түзете алатынын қарастырмайды. Бұл сұрақ мүмкіндік, билік және құқықтар тоғысқан жерде тұр.</figcaption></figure>
+</section>
+
+<section id="development" data-toc="1. Даму">
+<h2>1. Даму тәсілі</h2>
+<p>Қазақстандық зерттеулердің көбі цифрлық үкіметті кеңейтуді қажет ететін әлеует ретінде қарастырады. <a href="https://doi.org/10.1007/978-3-032-00514-4_13">Kosherbayeva &amp; Kylbayev (2025)</a> цифрлық платформалар арқылы азаматтарды тарту стратегияларын шолып, Қазақстанды Эстониямен, Сингапурмен және Финляндиямен салыстырады. <a href="https://doi.org/10.1007/978-981-95-4656-5_5">Kurmanov &amp; Rakhmetov (2026)</a> цифрлық үкіметті құрудың мүмкіндіктері мен қиындықтарын талқылайды. <a href="https://doi.org/10.56289/ijcsrp.222">Samarkhanov (2026)</a>, <a href="https://doi.org/10.54251/2522-4026.2026.1.20au">Abishova et al. (2026)</a>, <a href="https://doi.org/10.3389/frai.2025.1656329">Uandykova et al. (2025)</a> және <a href="https://doi.org/10.52123/1994-2370-2026-1804">Zhubanazarov et al. (2026)</a> мемлекеттік басқарудағы ЖИ әлеуетін, сондай-ақ кадрлық және құқықтық шектеулерді сипаттайды. <a href="https://doi.org/10.1109/TIMES-ICON67125.2025.11488132">Issabayeva &amp; Yesmagulova (2025)</a> eGov пен ашық деректер ашықтықты арттырды деп есептейді, бірақ мұны сауалнамалармен тексеру керектігін мойындайды.</p>
+<div class="split2"><div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><p><strong>Күшті жағы:</strong> институционалдық егжей-тегжей.</p></div><div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p><strong>Әлсіз жағы:</strong> азаматтардың онымен не істей алатынын емес, негізінен мемлекеттің не салатынын өлшейді.</p></div></div>
+</section>
+
+<section id="capacity" data-toc="2. Азаматтардың мүмкіндігі">
+<h2>2. Азаматтардың мүмкіндігі тәсілі</h2>
+<p>Зерттеулердің екінші тобы цифрлық үкіметті кім пайдалана алады деген сұрақ қояды. <a href="https://doi.org/10.3389/fpos.2025.1679601">Amirova (2025)</a> құқықтық талдауды 27 336 пайдаланушы қатысқан сауалнамамен ұштастырып, сенімді рәсімдер, деректермен бір рет алмасу және тұрақты көмек арналары әрі қарай кеңеюдің алғышарттары деген қорытындыға келеді. <a href="https://hdl.handle.net/10419/340041">Ziyoqulova &amp; Egamberdiev (2026)</a> Орталық Азияның төрт елі бойынша «Өтпелі кезеңдегі өмір» зерттеуінің деректерін пайдаланып, цифрлық сауаттылық пен электрондық үкіметті пайдалану арасында оң байланыс табады, бірақ олардың әдісі себеп-салдар туралы қорытынды жасауға мүмкіндік бермейтінін атап өтеді.</p>
+<p>Назарбаев Университетінің екі саясат зерттеуі қосымша дәлел береді: Астана тұрғындарына ашық үкімет порталдарын пайдалану қиын және олар өздерін елеусіз қалғандай сезінеді <a href="https://nur.nu.edu.kz/items/c22f005a-8d92-4ba3-b64d-75ef46dc2ba8">(Ali et al. 2025)</a>, ал портал сапасы үкіметке деген сеніммен байланысты, бірақ оның жұмысын бағалаумен байланысты емес (Baibolova &amp; Zhumash 2026). Бұл зерттеулер азаматтардың бір бөлігі шеттетілгенін көрсетеді, бірақ азаматтар жүйені қалай есеп беруге мәжбүрлей алатынын көрсетпейді.</p>
+</section>
+
+<section id="critical" data-toc="3. Сыни-саяси">
+<h2>3. Сыни-саяси тәсіл</h2>
+<p><a href="https://doi.org/10.1108/IJPSM-08-2018-0173">Knox &amp; Janenova (2019)</a> Қазақстандағы «электрондық үкімет парадоксын» анықтайды: технологияға қатты көңіл бөлу, мұнда жылдам транзакциялық қызметтер негізгі мемлекеттік қызметтерден назарды алып кетеді. Демократиялық емес елдерді зерттеген <a href="https://doi.org/10.1080/01900692.2012.757619">Linde &amp; Karlsson (2013)</a> электрондық қатысу сыбайлас жемқорлықты азайтатынына немесе басқару сапасын арттыратынына дәлел таппады. <a href="https://doi.org/10.1177/29768640251379943">Dyussenov (2025)</a> қызмет көрсететін орталықтандырылған платформалардың өзі саяси бақылауды да күшейте алатынын айтады.</p>
+<p>Бұл тәсіл тәуекелдерді түсіндіреді, бірақ практикалық шешімдер аз ұсынады.</p>
+</section>
+
+<section id="legal" data-toc="4. Құқықтық басқару">
+<h2>4. Құқықтық басқару тәсілі</h2>
+<p>Соңғы еңбектер назарды мүмкіндіктен құқықтарға аударады. Zhetpissov et al. (2026) Қазақстанның орталықтандырылған цифрлық профильдерінің үш құқықтық тәуекелін атайды:</p>
+<ul>
+<li>ведомстволар арасындағы кең қол жеткізу салдарынан деректерді заңсыз өңдеу;</li>
+<li>деректерді бастапқы мақсаттан тыс пайдалану;</li>
+<li>бытыраңқы және кейінгі әрекетке негізделген жауапкершіліктен туындайтын жүйелі бұзушылықтар.</li>
+</ul>
+<p>Олар мұны тәуелсіз қадағалау мен қол жеткізудің сараланған деңгейлеріне сүйенетін ЕО мен ЭЫДҰ үлгілерімен салыстырады. <a href="https://doi.org/10.3389/frai.2026.1781993">Buribayeva et al. (2026)</a> мемлекеттік сектордағы ЖИ-дің «жасырын» тәуекелдерінің бес тобын сипаттайды. Олардың пікірінше, бұл тәуекелдер негізінен құқықтық құрылымнан, орталықтандырылған деректер инфрақұрылымынан және әкімшілік әдеттерден туындайды, ал түсіндіру, аудит және шағымдану кепілдіктері әлсіз күйінде қалып отыр.</p>
+</section>
+
+<section id="theory" data-toc="Халықаралық теория">
+<h2>Халықаралық теория</h2>
+<p><a href="https://doi.org/10.1111/0033-3352.00168">Bovens &amp; Zouridis (2002)</a> бюрократия «жүйелік» деңгейге өткенде бағдарлама әзірлеушілер шешім қабылдаудың негізгі тұлғаларына айналатынын және тиісті құқықтық рәсімге қауіп төнетінін көрсетеді.</p>
+<p><a href="https://doi.org/10.1177/2053951717736335">Taylor (2017)</a> деректер әділдігін адамдардың деректер арқылы көрінуіндегі, бейнеленуіндегі және оларға деген қарым-қатынастағы әділдік ретінде анықтап, үш тірек ұсынады. Үшеуі де Қазақстанға қатысты:</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Тірек</th><th>Қазақстанда</th></tr></thead>
+<tbody>
+<tr><td>Көріну (көрінбеу)</td><td>Азаматтар мемлекетке көрінеді, бірақ өз жазбаларын оңай көре алмайды.</td></tr>
+<tr><td>Технологияға қатысу (қатыспау)</td><td>ХҚКО-лар қысқарған сайын eGov-тан бас тарту қымбаттай түсуде.</td></tr>
+<tr><td>Кемсітпеушілік</td><td>Қателер оларға дау айтуға мүмкіндігі аз адамдарға көбірек әсер етеді.</td></tr>
+</tbody></table></div>
+<p><a href="https://doi.org/10.1016/j.giq.2018.10.001">Androutsopoulou et al. (2019)</a> ЖИ чат-боттарын азаматтар мен мемлекет арасындағы жаңа байланыс арнасы ретінде сипаттайды. <a href="https://doi.org/10.1177/09520767251404286">Alishani &amp; Homburg (2025)</a> Эстонияда оларды пайдалануға дайындықты үкіметке деген сенім емес, қабылданатын пайдалылық пен технологияға деген сенім болжайтынын анықтады.</p>
+</section>
+
+<section id="complication" data-toc="Қарсы дәлелдер">
+<h2>Жобаны күрделендіретін дәлелдер</h2>
+<div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p><a href="https://doi.org/10.1093/jopart/mus048">Grimmelikhuijsen &amp; Meijer (2014)</a> тәжірибесінде ашықтықтың артуы мемлекеттің сенімділігін қабылдауға елеулі әсер етпеді. Адамдарға олардың деректерін көрсетудің өзі сенімді арттырмауы мүмкін.</p></div>
+</section>
+
+<section id="summary" data-toc="Қорытынды">
+<h2>Қорытынды</h2>
+<p>Зерттеушілер Қазақстанның цифрлық қызметтері дамыған, ал құқықтық кепілдіктер артта қалып отыр деген пікірге келіседі, бірақ бұл қызметтер негізінен азаматтарды ма, әлде мемлекетті ме күшейтеді деген мәселеде келіспейді.</p>
+<p>Осы тәсілдердің бірде-бірінен азаматтар мемлекет өздері туралы жазғанды тексеріп, түзете ала ма, тізілімдер қаншалықты жиі сәйкес келмейді деген сұрақтарға арналған зерттеу таппадым. Kuä дәл осы олқылықты толтырады. Ол мүмкіндік (2-тәсіл), билік (3-тәсіл) және құқықтар (4-тәсіл) мәселелері тоғысқан жерде тұр.</p>
+</section>
+</div><div class="l-ru" lang="ru"><section id="map" data-toc="Четыре подхода">
+<h2>Четыре подхода</h2>
+<p>Исследования цифрового правительства Казахстана можно разделить на четыре подхода. Они расходятся прежде всего в том, усиливает ли цифровизация граждан или государство.</p>
+<figure class="fig"><div class="fig-head"><div><span class="k">Карта литературы</span><h4>Где находится пробел</h4></div></div><svg viewBox="0 0 520 340" role="img" aria-label="Где находится пробел" style="max-width:560px;margin-inline:auto">
+<rect x="6" y="6" width="508" height="328" rx="16" fill="none" stroke="var(--line-2)" stroke-dasharray="5 5"/>
+<text class="c-lbl" x="24" y="30">Подход 1 (развитие): что строит государство</text>
+<circle class="fadein" style="--i:0" cx="200" cy="140" r="92" fill="var(--g1)" fill-opacity=".16" stroke="var(--g1)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:2" cx="320" cy="140" r="92" fill="var(--g2)" fill-opacity=".16" stroke="var(--g2)" stroke-width="1.5"/>
+<circle class="fadein" style="--i:4" cx="260" cy="236" r="92" fill="var(--g3)" fill-opacity=".2" stroke="var(--g3)" stroke-width="1.5"/>
+<text class="c-lbl2 fadein" style="--i:1;font-weight:600;fill:var(--ink)" x="160" y="118" text-anchor="middle">Возможности</text>
+<text class="c-lbl fadein" style="--i:1" x="160" y="136" text-anchor="middle">Подход 2</text>
+<text class="c-lbl2 fadein" style="--i:3;font-weight:600;fill:var(--ink)" x="360" y="118" text-anchor="middle">Власть</text>
+<text class="c-lbl fadein" style="--i:3" x="360" y="136" text-anchor="middle">Подход 3</text>
+<text class="c-lbl2 fadein" style="--i:5;font-weight:600;fill:var(--ink)" x="260" y="284" text-anchor="middle">Права</text>
+<text class="c-lbl fadein" style="--i:5" x="260" y="302" text-anchor="middle">Подход 4</text>
+<circle class="fadein a-blink" style="--i:7" cx="260" cy="178" r="7" fill="var(--warn)"/>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="200" text-anchor="middle">Могут ли граждане</text>
+<text class="c-val fadein" style="--i:8;font-size:12px" x="260" y="215" text-anchor="middle">проверять и исправлять записи?</text>
+</svg><figcaption>Ни одно найденное мной исследование не изучает, могут ли граждане проверять и исправлять то, что государство о них записывает. Этот вопрос находится на пересечении возможностей, власти и прав.</figcaption></figure>
+</section>
+
+<section id="development" data-toc="1. Развитие">
+<h2>1. Подход развития</h2>
+<p>Большинство казахстанских исследований рассматривает цифровое правительство как потенциал, который нужно наращивать. <a href="https://doi.org/10.1007/978-3-032-00514-4_13">Kosherbayeva &amp; Kylbayev (2025)</a> анализируют стратегии вовлечения граждан через цифровые платформы и сравнивают Казахстан с Эстонией, Сингапуром и Финляндией. <a href="https://doi.org/10.1007/978-981-95-4656-5_5">Kurmanov &amp; Rakhmetov (2026)</a> обсуждают возможности и трудности построения цифрового правительства. <a href="https://doi.org/10.56289/ijcsrp.222">Samarkhanov (2026)</a>, <a href="https://doi.org/10.54251/2522-4026.2026.1.20au">Abishova et al. (2026)</a>, <a href="https://doi.org/10.3389/frai.2025.1656329">Uandykova et al. (2025)</a> и <a href="https://doi.org/10.52123/1994-2370-2026-1804">Zhubanazarov et al. (2026)</a> описывают потенциал ИИ в государственном управлении, а также кадровые и правовые ограничения. <a href="https://doi.org/10.1109/TIMES-ICON67125.2025.11488132">Issabayeva &amp; Yesmagulova (2025)</a> утверждают, что eGov и открытые данные повысили прозрачность, но признают, что это нужно проверить опросами.</p>
+<div class="split2"><div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><p><strong>Сильная сторона:</strong> институциональные детали.</p></div><div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p><strong>Слабая сторона:</strong> подход в основном измеряет, что строит государство, а не то, что граждане могут с этим сделать.</p></div></div>
+</section>
+
+<section id="capacity" data-toc="2. Возможности граждан">
+<h2>2. Подход возможностей граждан</h2>
+<p>Вторая группа исследований задаётся вопросом, кто способен пользоваться цифровым правительством. <a href="https://doi.org/10.3389/fpos.2025.1679601">Amirova (2025)</a> сочетает правовой анализ с опросом 27 336 пользователей и приходит к выводу, что безотказные процедуры, однократный обмен данными и постоянные каналы помощи — предпосылки дальнейшего расширения. <a href="https://hdl.handle.net/10419/340041">Ziyoqulova &amp; Egamberdiev (2026)</a> на данных обследования «Жизнь в переходный период» по четырём странам Центральной Азии находят положительную связь между цифровой грамотностью и использованием электронного правительства, но отмечают, что их дизайн не позволяет делать причинные выводы.</p>
+<p>Два исследования Назарбаев Университета добавляют аргументы: жителям Астаны трудно пользоваться порталами открытого правительства, и они чувствуют, что их не слышат <a href="https://nur.nu.edu.kz/items/c22f005a-8d92-4ba3-b64d-75ef46dc2ba8">(Ali et al. 2025)</a>, а качество портала связано с доверием к правительству, но не с оценкой его работы (Baibolova &amp; Zhumash 2026). Эти исследования показывают, что часть граждан исключена, но не показывают, как граждане могли бы требовать от системы подотчётности.</p>
+</section>
+
+<section id="critical" data-toc="3. Критико-политический">
+<h2>3. Критико-политический подход</h2>
+<p><a href="https://doi.org/10.1108/IJPSM-08-2018-0173">Knox &amp; Janenova (2019)</a> выявляют в Казахстане «парадокс электронного правительства»: сильный акцент на технологиях, при котором более быстрые транзакционные услуги отвлекают внимание от основных государственных услуг. В исследовании недемократических стран <a href="https://doi.org/10.1080/01900692.2012.757619">Linde &amp; Karlsson (2013)</a> не нашли доказательств того, что электронное участие снижает коррупцию или повышает качество управления. <a href="https://doi.org/10.1177/29768640251379943">Dyussenov (2025)</a> утверждает, что те же централизованные платформы, которые предоставляют услуги, могут усиливать политический контроль.</p>
+<p>Этот подход объясняет риски, но предлагает мало практических решений.</p>
+</section>
+
+<section id="legal" data-toc="4. Правовой">
+<h2>4. Правовой подход</h2>
+<p>Недавние работы смещают фокус с возможностей на права. Zhetpissov et al. (2026) выделяют три правовых риска централизованных цифровых профилей Казахстана:</p>
+<ul>
+<li>незаконная обработка данных из-за широкого доступа между ведомствами;</li>
+<li>использование данных в целях, выходящих за рамки первоначальной;</li>
+<li>системные нарушения из-за раздробленной и реактивной ответственности.</li>
+</ul>
+<p>Они противопоставляют этому модели ЕС и ОЭСР, которые опираются на независимый надзор и дифференцированные уровни доступа. <a href="https://doi.org/10.3389/frai.2026.1781993">Buribayeva et al. (2026)</a> описывают пять групп «скрытых» рисков ИИ в государственном секторе. По их мнению, эти риски возникают прежде всего из правового дизайна, централизованной инфраструктуры данных и административной рутины, а гарантии объяснения, аудита и обжалования остаются слабыми.</p>
+</section>
+
+<section id="theory" data-toc="Международная теория">
+<h2>Международная теория</h2>
+<p><a href="https://doi.org/10.1111/0033-3352.00168">Bovens &amp; Zouridis (2002)</a> показывают, что когда бюрократия становится «системной», ключевыми лицами, принимающими решения, становятся разработчики программ, а надлежащая правовая процедура оказывается под угрозой.</p>
+<p><a href="https://doi.org/10.1177/2053951717736335">Taylor (2017)</a> определяет справедливость данных как справедливость того, как людей делают видимыми, представляют и как с ними обращаются через данные, и предлагает три опоры. Все три применимы к Казахстану:</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Опора</th><th>В Казахстане</th></tr></thead>
+<tbody>
+<tr><td>(Не)видимость</td><td>Граждане видимы для государства, но им трудно увидеть собственные записи.</td></tr>
+<tr><td>(Не)вовлечённость в технологии</td><td>Отказ от eGov становится всё дороже по мере сокращения ЦОНов.</td></tr>
+<tr><td>Недискриминация</td><td>Ошибки сильнее всего бьют по тем, кому труднее их оспорить.</td></tr>
+</tbody></table></div>
+<p><a href="https://doi.org/10.1016/j.giq.2018.10.001">Androutsopoulou et al. (2019)</a> описывают чат-боты с ИИ как новый канал общения граждан и государства. <a href="https://doi.org/10.1177/09520767251404286">Alishani &amp; Homburg (2025)</a> обнаружили в Эстонии, что готовность ими пользоваться предсказывают воспринимаемая полезность и доверие к технологиям, а не доверие к правительству.</p>
+</section>
+
+<section id="complication" data-toc="Доказательства против">
+<h2>Доказательства, которые осложняют проект</h2>
+<div class="callout warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg><p>В эксперименте <a href="https://doi.org/10.1093/jopart/mus048">Grimmelikhuijsen &amp; Meijer (2014)</a> большая прозрачность не оказала значимого влияния на воспринимаемую надёжность государства. Показ людям их данных сам по себе может не повысить доверие.</p></div>
+</section>
+
+<section id="summary" data-toc="Итог">
+<h2>Итог</h2>
+<p>Исследователи согласны, что цифровые услуги Казахстана развиты, а правовые гарантии отстают, но расходятся в том, усиливают ли эти услуги прежде всего граждан или государство.</p>
+<p>Ни в одном из этих подходов я не нашла исследования того, могут ли граждане проверять и исправлять то, что государство о них записывает, или того, как часто расходятся реестры. Именно этот пробел закрывает Kuä. Он находится там, где встречаются вопросы возможностей (подход 2), власти (подход 3) и прав (подход 4).</p>
+</section>
+</div><nav class="pager" aria-label="Pages"><a class="prev" href="data.html"><small>← <span class="l-en" lang="en">Previous</span><span class="l-kk" lang="kk">Алдыңғы</span><span class="l-ru" lang="ru">Назад</span></small><b><span class="l-en" lang="en">Data</span><span class="l-kk" lang="kk">Деректер</span><span class="l-ru" lang="ru">Данные</span></b></a><a class="next" href="solution.html"><small><span class="l-en" lang="en">Next</span><span class="l-kk" lang="kk">Келесі</span><span class="l-ru" lang="ru">Далее</span> →</small><b><span class="l-en" lang="en">Solution</span><span class="l-kk" lang="kk">Шешім</span><span class="l-ru" lang="ru">Решение</span></b></a></nav></div></div></div></main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div><a class="brand" href="index.html" style="margin-bottom:12px"><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="var(--accent)"/><path d="M9 11.5h11M9 17h16M9 22.5h9" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round"/><circle cx="24.5" cy="11.5" r="2.6" fill="var(--accent-ink)"/></svg><span><b>Kuä</b></span></a><p class="muted" style="margin:0"><span class="l-en" lang="en">Kuä is a student research prototype. It proposes an eGov service that would let citizens of Kazakhstan see who accesses their records, find contradictions between registries and get errors corrected.</span><span class="l-kk" lang="kk">Kuä — студенттік зерттеу прототипі. Ол Қазақстан азаматтарына өз жазбаларына кім жүгінгенін көруге, тізілімдер арасындағы қайшылықтарды табуға және қателерді түзетуге мүмкіндік беретін eGov қызметін ұсынады.</span><span class="l-ru" lang="ru">Kuä — студенческий исследовательский прототип. Он предлагает услугу eGov, которая позволила бы гражданам Казахстана видеть, кто обращается к их записям, находить противоречия между реестрами и добиваться исправления ошибок.</span></p></div>
+<div><h4><span class="l-en" lang="en">The proposal</span><span class="l-kk" lang="kk">Ұсыныс</span><span class="l-ru" lang="ru">Предложение</span></h4><ul><li><a href="problem.html"><span class="l-en" lang="en">Problem</span><span class="l-kk" lang="kk">Мәселе</span><span class="l-ru" lang="ru">Проблема</span></a></li><li><a href="data.html"><span class="l-en" lang="en">Data</span><span class="l-kk" lang="kk">Деректер</span><span class="l-ru" lang="ru">Данные</span></a></li><li><a href="research.html"><span class="l-en" lang="en">Research</span><span class="l-kk" lang="kk">Зерттеулер</span><span class="l-ru" lang="ru">Исследования</span></a></li><li><a href="solution.html"><span class="l-en" lang="en">Solution</span><span class="l-kk" lang="kk">Шешім</span><span class="l-ru" lang="ru">Решение</span></a></li><li><a href="costs.html"><span class="l-en" lang="en">Costs</span><span class="l-kk" lang="kk">Шығындар</span><span class="l-ru" lang="ru">Издержки</span></a></li><li><a href="verdict.html"><span class="l-en" lang="en">Verdict</span><span class="l-kk" lang="kk">Қорытынды</span><span class="l-ru" lang="ru">Вывод</span></a></li></ul></div>
+<div><h4><span class="l-en" lang="en">About this project</span><span class="l-kk" lang="kk">Жоба туралы</span><span class="l-ru" lang="ru">О проекте</span></h4><ul><li><a href="about.html"><span class="l-en" lang="en">About</span><span class="l-kk" lang="kk">Жоба туралы</span><span class="l-ru" lang="ru">О проекте</span></a></li><li><a href="sources.html"><span class="l-en" lang="en">Sources</span><span class="l-kk" lang="kk">Дереккөздер</span><span class="l-ru" lang="ru">Источники</span></a></li><li><a href="index.html#demo"><span class="l-en" lang="en">Try the demo</span><span class="l-kk" lang="kk">Демоны көру</span><span class="l-ru" lang="ru">Попробовать демо</span></a></li><li><a href="about.html#translation"><span class="l-en" lang="en">Translation note</span><span class="l-kk" lang="kk">Аударма туралы</span><span class="l-ru" lang="ru">О переводе</span></a></li></ul></div>
+<div><h4><span class="l-en" lang="en">Official services</span><span class="l-kk" lang="kk">Ресми қызметтер</span><span class="l-ru" lang="ru">Официальные услуги</span></h4><ul><li><a href="https://egov.kz"><span class="l-en" lang="en">Public services: egov.kz</span><span class="l-kk" lang="kk">Мемлекеттік қызметтер: egov.kz</span><span class="l-ru" lang="ru">Государственные услуги: egov.kz</span></a></li></ul><p class="muted" style="font-size:.84rem;margin-top:10px"><span class="l-en" lang="en">This site collects no personal data and uses no cookies or trackers.</span><span class="l-kk" lang="kk">Сайт жеке деректер жинамайды, cookie мен трекерлерді қолданбайды.</span><span class="l-ru" lang="ru">Сайт не собирает персональные данные и не использует cookie и трекеры.</span></p></div>
+</div>
+<div class="fine"><span><span class="l-en" lang="en">PLS 419: AI from a Social Science Perspective · Nazarbayev University · Fall 2026</span><span class="l-kk" lang="kk">PLS 419: ЖИ әлеуметтік ғылымдар тұрғысынан · Назарбаев Университеті · 2026 жылғы күз</span><span class="l-ru" lang="ru">PLS 419: ИИ с точки зрения социальных наук · Назарбаев Университет · осень 2026</span></span><span><span class="l-en" lang="en">Original language: English. Kazakh and Russian versions are raw drafts and will be checked.</span><span class="l-kk" lang="kk">Түпнұсқа тілі — ағылшын. Қазақша және орысша нұсқалар — алғашқы аударма, олар тексеріледі.</span><span class="l-ru" lang="ru">Язык оригинала — английский. Казахская и русская версии — черновые и будут проверены.</span></span></div>
+</div></footer>
+<button class="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

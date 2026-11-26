@@ -1,0 +1,54 @@
+title: The AI-assisted solution
+eyebrow: Section 4.1–4.2
+lede: Kuä is a proposed service within eGov. AI explains and drafts; standard software compares records; people make the decisions.
+art: solution
+---
+<section id="what" data-toc="What Kuä is">
+<h2>What Kuä is</h2>
+<p>Kuä (“witness”) is a proposed service within eGov, built by NIT on the QazTech platform and running on the state's AlemGPT platform. It has four functions:</p>
+<ol>
+<li><strong>View:</strong> a single list of every access to and change in a citizen's records, by state bodies and companies, in Kazakh, Russian or English.</li>
+<li><strong>Check:</strong> standard software (not AI) compares a citizen's records across registries and flags contradictions.</li>
+<li><strong>Correct:</strong> AI explains each mismatch, identifies the agency responsible for the record, and drafts a correction request or complaint. The citizen decides whether to send it.</li>
+<li><strong>Escalate:</strong> requests that receive no response are passed automatically to oversight bodies outside the ministry.</li>
+</ol>
+<p><a href="index.html#functions">See each function animated</a> or <a href="index.html#demo">try the scripted demo</a>.</p>
+</section>
+
+<section id="ai-role" data-toc="Where AI is used">
+<h2>Where AI is used, and where it is not</h2>
+<p>AI is used only for explaining, identifying the responsible agency and drafting; it does not edit records or make decisions.</p>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Function</th><th>What does the work</th><th>Role of AI</th></tr></thead>
+<tbody>
+<tr><td><strong>View</strong></td><td>Access logs from the registries</td><td><span class="tag plain">None</span></td></tr>
+<tr><td><strong>Check</strong></td><td>Standard comparison software</td><td><span class="tag plain">None</span></td></tr>
+<tr class="hl"><td><strong>Correct</strong></td><td>AI explains and drafts; the citizen decides whether to send; the responsible agency corrects the record</td><td><span class="tag">Explains, identifies, drafts</span></td></tr>
+<tr><td><strong>Escalate</strong></td><td>Automatic rules and legal deadlines; oversight bodies outside the ministry</td><td><span class="tag plain">None</span></td></tr>
+</tbody></table></div>
+<h3>Accessibility</h3>
+<p>Accessibility features include voice input, a plain-language mode, screen-reader support, large text, and the option for a trusted person to help with the citizen's consent. All functions are also available at a ЦОН, in line with the AI Law's right to refuse interaction with AI (Art. 16(1)(6)) <a class="src" href="https://zakon.uchet.kz/rus/docs/Z2500000230">[AI Law]</a>.</p>
+</section>
+
+<section id="strict" data-toc="The strict approach">
+<h2>The strict approach</h2>
+<div class="callout key">{{icon:shield}}<div><p>Kuä shows every access to a citizen's data, <strong>including access by law enforcement</strong>. Where details are restricted, it still records that “an exempt body accessed [category] on [date]” and tells the citizen where to request details.</p></div></div>
+<p>This is the first of the six conditions in the <a href="verdict.html">verdict</a>, and the one without which the answer is no.</p>
+</section>
+
+<section id="cases" data-toc="Comparable cases">
+<h2>Evidence from comparable cases</h2>
+<div class="cases">
+<div class="case rv"><span class="flag">United Kingdom</span><h3>GOV.UK Chat</h3>
+<p>Answers questions only from official GOV.UK content and provides links to sources. In two public pilots, more than 10,000 users asked 26,000 questions, and accuracy rose from 76% to 90% <a class="src" href="https://insidegovuk.blog.gov.uk/2026/03/16/5-things-we-learned-testing-gov-uk-chat-an-ai-assistant-for-government">[GOV.UK blog]</a>.</p>
+<p class="lesson">Kuä would also publish its accuracy, separately for each language.</p></div>
+<div class="case rv" data-d="1"><span class="flag">Ukraine</span><h3>Diia.AI</h3>
+<p>Launched on 1 September 2025 in partnership with Google, it is connected to state registers and delivers services, such as income certificates, through a chat interface <a class="src" href="https://www.president.gov.ua/en/news/komanda-mincifri-prezentuvala-prezidentu-novi-proyekti-u-sfe-99885">[president.gov.ua]</a> <a class="src" href="https://oecd.ai/en/dashboards/policy-initiatives/diia-ai-assistant">[OECD.AI]</a>.</p>
+<p class="lesson">Most of its usage figures are self-reported.</p></div>
+<div class="case rv" data-d="2"><span class="flag">Estonia</span><h3>Data Tracker and Bürokratt</h3>
+<p>Estonia provides the institutional model, although not an AI-based one. Since 2017, its Data Tracker has shown citizens who accessed their data, when and for what purpose. The Information System Authority operates the tool, and a separate Data Protection Inspectorate handles complaints <a class="src" href="https://e-estonia.com/data-tracker-build-citizen-trust/">[e-estonia]</a> <a class="src" href="https://ria.ee/en/state-information-system/people-centred-data-exchange/data-tracker">[RIA]</a>.</p>
+<p class="lesson">Its AI assistant Bürokratt cost a little under €500,000 to build initially (2022) <a class="src" href="https://www.computerweekly.com/news/252513241/The-birth-of-Estonias-digital-civil-servant">[Computer Weekly]</a>.</p></div>
+</div>
+<p>These cases suggest that AI can answer accurately when limited to official sources and publicly measured (UK), and that an access log can work as a routine state service when a separate body handles complaints (Estonia). Neither case involves AI correcting state records, which is why Kuä keeps correction as a human process with legal deadlines.</p>
+<p class="muted" style="font-size:.9rem">Disclosure: GOV.UK Chat reportedly runs on Anthropic's Claude, the same model family that helped research this project. See the <a href="about.html#ai">AI transparency statement</a>.</p>
+</section>
